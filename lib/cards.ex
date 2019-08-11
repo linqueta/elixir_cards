@@ -3,7 +3,7 @@ defmodule Cards do
     values = ["Ace", "Two", "Three", "Four", "Five"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
-    Enum.map(values, fn x -> Enum.map(suits, fn y -> "#{x} of #{y}" end) end)
+    List.flatten(Enum.map(values, fn x -> Enum.map(suits, fn y -> "#{x} of #{y}" end) end))
   end
 
   def shuffle(deck) do
