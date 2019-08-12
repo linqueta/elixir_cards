@@ -1,4 +1,11 @@
 defmodule Cards do
+  @moduledoc """
+    Provides methods
+  """
+
+  @doc """
+  Method to create deck
+  """
   def create_deck do
     values = ["Ace", "Two", "Three", "Four", "Five"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
