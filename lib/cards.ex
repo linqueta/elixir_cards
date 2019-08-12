@@ -21,6 +21,16 @@ defmodule Cards do
     Enum.member?(deck, card)
   end
 
+  @doc """
+    Deal a hand deck
+
+  ## Examples
+
+      iex> {hand, _} = Cards.deal(Cards.create_deck, 1)
+      iex> hand
+      ["Ace of Spades"]
+
+  """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
   end
