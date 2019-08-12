@@ -21,4 +21,11 @@ defmodule Cards do
   def save(deck, filename) do
     File.write(filename, :erlang.term_to_binary(deck))
   end
+
+  def load(filename) do
+    case File.read(filename) do
+      {:ok, deck } -> :erlang.binary_to_term(deck)
+      {:error, _} -> 'Something bad happened'
+    end
+  end
 end
